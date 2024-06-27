@@ -1,0 +1,56 @@
+.example-card {
+  background-color: #f8f9fa; /* Fondo más claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Oculta desbordamiento */
+  
+}
+
+.example-header-image {
+  background-image: url('https://st4.depositphotos.com/1763191/28989/v/450/depositphotos_289893956-stock-illustration-soda-can-in-aluminium-on.jpg');
+  background-size: cover;
+  border-radius: 20%; /* Hacer la imagen redonda */
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  grid-gap: 20px; /* Espacio entre los elementos */
+  padding: 20px; /* Espacio interior alrededor de la galería */
+  background-color: #e9ecef; /* Fondo suave para la galería */
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 20px; /* Más espacio interior */
+  text-align: center;
+  align-items: center;
+  margin-top: 10%;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff; /* Fondo blanco */
+  transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+}
+
+.product-item:hover {
+  transform: translateY(-5px); /* Elevar tarjeta al pasar el ratón */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar sombra al pasar el ratón */
+}
+
+mat-card-title, mat-card-subtitle {
+  color: #343a40; /* Color de texto más oscuro para título y subtítulo */
+}
+
+mat-card-content p {
+  color: #495057; /* Color de texto para descripción */
+}
+
+mat-card-actions button {
+  background-color: #007bff; /* Botón azul */
+  color: #ffffff; /* Texto del botón en blanco */
+  align-items: center;
+}
+
+mat-card-actions button:hover {
+  background-color: #0056b3; /* Botón más oscuro al pasar el ratón */
+}

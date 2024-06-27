@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos */
+  }
+  
+  .left-column {
+    flex: 3; /* Ajusta la proporción de la columna izquierda */
+  }
+  
+  .right-column {
+    flex: 1; /* Ajusta la proporción de la columna derecha */
+    padding-left: 20px; /* Espacio opcional para separar las columnas */
+  }

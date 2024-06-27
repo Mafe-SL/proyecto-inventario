@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="main-toolbar">
+    <button mat-icon-button (click)="drawer.toggle()" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Inventario</span>
+    <span class="spacer"></span>
+    <nav class="navbar">
+      <a mat-button routerLink="/inicio">Inicio</a>
+      <a mat-button routerLink="/productos">Productos</a>
+      <a mat-button routerLink="/usuarios">Usuarios</a>
+      <a mat-button routerLink="/tienda">Tienda</a>
+    </nav>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" mode="over" opened>
+      <mat-toolbar class="sidenav-toolbar">Menú</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/inicio" (click)="drawer.toggle()">Inicio</a>
+        <a mat-list-item routerLink="/productos" (click)="drawer.toggle()">Productos</a>
+        <a mat-list-item routerLink="/usuarios" (click)="drawer.toggle()">Usuarios</a>
+        <a mat-list-item routerLink="/tienda" (click)="drawer.toggle()">Tienda</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

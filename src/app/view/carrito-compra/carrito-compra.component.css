@@ -1,0 +1,48 @@
+.cart {
+    margin: 20px auto; /* Centrar el contenedor y agregar margen superior/inferior */
+    padding: 20px; /* Espacio interior */
+    background-color: #f8f9fa; /* Fondo más claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar texto */
+}
+
+.cart h2 {
+    color: #343a40; /* Color del título */
+    margin-bottom: 20px; /* Espacio inferior del título */
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre items */
+    padding: 10px 0; /* Espacio interno superior e inferior */
+    margin-bottom: 10px; /* Espacio inferior entre items */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Eliminar línea divisoria del último item */
+}
+
+.cart-item h3 {
+    color: #007bff; /* Color del nombre del producto */
+    margin-bottom: 10px; /* Espacio inferior del nombre del producto */
+}
+
+.cart-item p {
+    color: #495057; /* Color de texto de la descripción y el precio */
+    margin: 5px 0; /* Espaciado vertical entre parágrafos */
+}
+
+.cart button {
+    background-color: #007bff; /* Botón azul */
+    color: #ffffff; /* Texto del botón en blanco */
+    padding: 10px 20px; /* Espacio interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-top: 20px; /* Espacio superior del botón */
+}
+
+.cart button:hover {
+    background-color: #0056b3; /* Botón más oscuro al pasar el ratón */
+}
