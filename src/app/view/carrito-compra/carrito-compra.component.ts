@@ -1,26 +1,27 @@
-import { Component } from '@angular/core';
+// carrito-compra.component.ts
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
-import { CartService } from 'src/app/service/cart.service';
+import { DetailSaleService } from 'src/app/service/detail-sale.service';
 
 @Component({
   selector: 'app-carrito-compra',
   templateUrl: './carrito-compra.component.html',
   styleUrls: ['./carrito-compra.component.css']
 })
-export class CarritoCompraComponent {
-
+export class CarritoCompraComponent implements OnInit {
   cartItems: Product[] = [];
+  totalPrice: number = 0;
 
-  constructor(private cartService: CartService) {}
+  constructor(private detailSaleService: DetailSaleService) {}
 
   ngOnInit(): void {
-    this.cartService.cartItems$.subscribe(items => {
+    this.detailSaleService.getProductSale().subscribe(items => {
       this.cartItems = items;
+      this.totalPrice = this.detailSaleService.getTotalPrice();
     });
   }
 
   clearCart(): void {
-    this.cartService.clearCart();
+    this.detailSaleService.clearCart();
   }
-
 }

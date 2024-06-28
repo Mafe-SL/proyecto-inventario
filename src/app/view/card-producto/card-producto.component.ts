@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+// card-producto.component.ts
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
 import { ProductosService } from 'src/app/productos.service';
-import { CartService } from 'src/app/service/cart.service';
+import { DetailSaleService } from 'src/app/service/detail-sale.service';
 
 @Component({
   selector: 'app-card-producto',
   templateUrl: './card-producto.component.html',
   styleUrls: ['./card-producto.component.css']
 })
-export class CardProductoComponent {
+export class CardProductoComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productService: ProductosService, private cartService: CartService) {}
+  constructor(private productService: ProductosService, private detailSaleService: DetailSaleService) {}
 
   ngOnInit(): void {
     this.productListMethod();
@@ -30,8 +31,7 @@ export class CardProductoComponent {
   }
 
   addToCart(product: Product): void {
-    this.cartService.addToCart(product);
+    this.detailSaleService.addProductSale(product);
     console.log('Product added to cart:', product);
   }
-
 }
