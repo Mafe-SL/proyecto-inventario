@@ -1,3 +1,4 @@
+/* carrito-compra.component.css */
 .cart {
     margin: 20px auto; /* Centrar el contenedor y agregar margen superior/inferior */
     padding: 20px; /* Espacio interior */
@@ -32,7 +33,7 @@
     margin: 5px 0; /* Espaciado vertical entre parágrafos */
 }
 
-.cart button {
+.vaciar-button {
     background-color: #007bff; /* Botón azul */
     color: #ffffff; /* Texto del botón en blanco */
     padding: 10px 20px; /* Espacio interior del botón */
@@ -43,6 +44,18 @@
     margin-top: 20px; /* Espacio superior del botón */
 }
 
-.cart button:hover {
+.vaciar-button:hover {
     background-color: #0056b3; /* Botón más oscuro al pasar el ratón */
+}
+
+.delete-button {
+    color: #ff0000; /* Color rojo */
+    border: none; /* Sin borde */
+    background: none; /* Sin fondo */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    padding: 0; /* Eliminar padding */
+}
+
+.delete-button:hover {
+    color: #b30000; /* Color rojo oscuro al pasar el ratón */
 }

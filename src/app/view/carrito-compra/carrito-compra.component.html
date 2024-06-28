@@ -2,13 +2,16 @@
 <div class="cart">
   <h2>Carrito de Compras</h2>
   <div *ngFor="let item of cartItems" class="cart-item">
-      <h3>{{ item.name }}</h3>
-      <p>{{ item.description }}</p>
-      <p>{{ item.price | currency }}</p>
-      <p>Cantidad: {{ item.amount }}</p>
+    <h3>{{ item.name }}</h3>
+    <p>{{ item.description }}</p>
+    <p>{{ item.price | currency }}</p>
+    <p>Cantidad: {{ item.amount }}</p>
+    <button class="delete-button" mat-icon-button color="warn" (click)="removeFromCart(item._id)">
+      <mat-icon>delete</mat-icon>
+    </button>
   </div>
   <div class="total">
-      <h3>Total: {{ totalPrice | currency }}</h3>
+    <h3>Total: {{ totalPrice | currency }}</h3>
   </div>
-  <button (click)="clearCart()">Vaciar</button>
+  <button class="vaciar-button" mat-button (click)="clearCart()">Vaciar</button>
 </div>

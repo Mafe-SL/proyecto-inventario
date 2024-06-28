@@ -24,4 +24,9 @@ export class CarritoCompraComponent implements OnInit {
   clearCart(): void {
     this.detailSaleService.clearCart();
   }
+
+  removeFromCart(id: string): void {
+    this.detailSaleService.deleteProductSale(id);
+    this.totalPrice = this.detailSaleService.getTotalPrice();
+  }
 }
